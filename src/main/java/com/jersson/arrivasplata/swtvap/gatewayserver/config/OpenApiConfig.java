@@ -22,9 +22,25 @@ public class OpenApiConfig {
         return builder
                 .routes()
                 .route("swtvap-api-auth", r -> r.path("/swtvap-api-auth/v3/api-docs").and().method(HttpMethod.GET).uri("lb://SWTVAP-API-AUTH"))
-                .route("swtvap-api-parameter", r -> r.path("/swtvap-api-parameter/v3/api-docs").and().method(HttpMethod.GET).uri("lb://SWTVAP-API-PARAMETER"))
-                .route("swtvap-api-auth", r -> r.path("/api/v1/auth/**").filters(f -> f.filter(filterFactory.apply())).uri("lb://SWTVAP-API-AUTH"))
-                .route("swtvap-api-parameter", r -> r.path("/api/v1/parameter/**").filters(f -> f.filter(filterFactory.apply())).uri("lb://SWTVAP-API-PARAMETER"))
+                .route("swtvap-api-auth", r -> r.path("/api/auth/**").filters(f -> f.filter(filterFactory.apply())).uri("lb://SWTVAP-API-AUTH"))
+                .route("swtvap-api-setting", r -> r.path("/swtvap-api-setting/v3/api-docs").and().method(HttpMethod.GET).uri("lb://SWTVAP-API-SETTING"))
+                .route("swtvap-api-setting", r -> r.path("/api/setting/**").filters(f -> f.filter(filterFactory.apply())).uri("lb://SWTVAP-API-SETTING"))
+                .route("swtvap-api-review", r -> r.path("/swtvap-api-review/v3/api-docs").and().method(HttpMethod.GET).uri("lb://SWTVAP-API-REVIEW"))
+                .route("swtvap-api-review", r -> r.path("/api/review/**").filters(f -> f.filter(filterFactory.apply())).uri("lb://SWTVAP-API-REVIEW"))
+                .route("swtvap-api-relationship", r -> r.path("/swtvap-api-relationship/v3/api-docs").and().method(HttpMethod.GET).uri("lb://SWTVAP-API-RELATIONSHIP"))
+                .route("swtvap-api-relationship", r -> r.path("/api/relationship/**").filters(f -> f.filter(filterFactory.apply())).uri("lb://SWTVAP-API-RELATIONSHIP"))
+                .route("swtvap-api-product", r -> r.path("/swtvap-api-product/v3/api-docs").and().method(HttpMethod.GET).uri("lb://SWTVAP-API-PRODUCT"))
+                .route("swtvap-api-product", r -> r.path("/api/product/**").filters(f -> f.filter(filterFactory.apply())).uri("lb://SWTVAP-API-PRODUCT"))
+                .route("swtvap-api-order", r -> r.path("/swtvap-api-order/v3/api-docs").and().method(HttpMethod.GET).uri("lb://SWTVAP-API-ORDER"))
+                .route("swtvap-api-order", r -> r.path("/api/order/**").filters(f -> f.filter(filterFactory.apply())).uri("lb://SWTVAP-API-ORDER"))
+                .route("swtvap-api-logistic", r -> r.path("/swtvap-api-logistic/v3/api-docs").and().method(HttpMethod.GET).uri("lb://SWTVAP-API-LOGISTIC"))
+                .route("swtvap-api-logistic", r -> r.path("/api/logistic/**").filters(f -> f.filter(filterFactory.apply())).uri("lb://SWTVAP-API-LOGISTIC"))
+                .route("swtvap-api-inventory", r -> r.path("/swtvap-api-inventory/v3/api-docs").and().method(HttpMethod.GET).uri("lb://SWTVAP-API-INVENTORY"))
+                .route("swtvap-api-inventory", r -> r.path("/api/inventory/**").filters(f -> f.filter(filterFactory.apply())).uri("lb://SWTVAP-API-INVENTORY"))
+                .route("swtvap-api-cart", r -> r.path("/swtvap-api-cart/v3/api-docs").and().method(HttpMethod.GET).uri("lb://SWTVAP-API-CART"))
+                .route("swtvap-api-cart", r -> r.path("/api/cart/**").filters(f -> f.filter(filterFactory.apply())).uri("lb://SWTVAP-API-CART"))
+                .route("swtvap-api-campaing", r -> r.path("/swtvap-api-campaing/v3/api-docs").and().method(HttpMethod.GET).uri("lb://SWTVAP-API-CAMPAING"))
+                .route("swtvap-api-campaing", r -> r.path("/api/campaing/**").filters(f -> f.filter(filterFactory.apply())).uri("lb://SWTVAP-API-CAMPAING"))
                 .build();
     }
 }
