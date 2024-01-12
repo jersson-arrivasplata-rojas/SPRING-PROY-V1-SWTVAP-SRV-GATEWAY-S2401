@@ -39,6 +39,7 @@ public class OpenApiConfig {
                 .route("swtvap-api-inventory", r -> r.path("/api/catalogs/**").filters(f -> f.filter(filterFactory.apply())).uri("lb://SWTVAP-API-INVENTORY"))
                 .route("swtvap-api-inventory", r -> r.path("/api/categories/**").filters(f -> f.filter(filterFactory.apply())).uri("lb://SWTVAP-API-INVENTORY"))
                 .route("swtvap-api-inventory", r -> r.path("/api/category-catalogs/**").filters(f -> f.filter(filterFactory.apply())).uri("lb://SWTVAP-API-INVENTORY"))
+                .route("swtvap-api-inventory", r -> r.path("/api/units/**").filters(f -> f.filter(filterFactory.apply())).uri("lb://SWTVAP-API-INVENTORY"))
                 .route("swtvap-api-cart", r -> r.path("/swtvap-api-cart/v3/api-docs").and().method(HttpMethod.GET).uri("lb://SWTVAP-API-CART"))
                 .route("swtvap-api-cart", r -> r.path("/api/cart/**").filters(f -> f.filter(filterFactory.apply())).uri("lb://SWTVAP-API-CART"))
                 .route("swtvap-api-campaing", r -> r.path("/swtvap-api-campaing/v3/api-docs").and().method(HttpMethod.GET).uri("lb://SWTVAP-API-CAMPAING"))
