@@ -36,7 +36,7 @@ public class OpenApiConfig {
                 .route("swtvap-api-product", r -> r.path("/api/product-discounts/**").filters(f -> f.filter(filterFactory.apply())).uri("lb://SWTVAP-API-PRODUCT"))
                 .route("swtvap-api-product", r -> r.path("/api/product-units/**").filters(f -> f.filter(filterFactory.apply())).uri("lb://SWTVAP-API-PRODUCT"))
                 .route("swtvap-api-product", r -> r.path("/api/product-categories/**").filters(f -> f.filter(filterFactory.apply())).uri("lb://SWTVAP-API-PRODUCT"))
-                .route("swtvap-api-product", r -> r.path("/api/products-providers/**").filters(f -> f.filter(filterFactory.apply())).uri("lb://SWTVAP-API-PRODUCT"))
+                .route("swtvap-api-product", r -> r.path("/api/product-providers/**").filters(f -> f.filter(filterFactory.apply())).uri("lb://SWTVAP-API-PRODUCT"))
                 .route("swtvap-api-order", r -> r.path("/swtvap-api-order/v3/api-docs").and().method(HttpMethod.GET).uri("lb://SWTVAP-API-ORDER"))
                 .route("swtvap-api-order", r -> r.path("/api/order/**").filters(f -> f.filter(filterFactory.apply())).uri("lb://SWTVAP-API-ORDER"))
                 .route("swtvap-api-logistic", r -> r.path("/swtvap-api-logistic/v3/api-docs").and().method(HttpMethod.GET).uri("lb://SWTVAP-API-LOGISTIC"))
