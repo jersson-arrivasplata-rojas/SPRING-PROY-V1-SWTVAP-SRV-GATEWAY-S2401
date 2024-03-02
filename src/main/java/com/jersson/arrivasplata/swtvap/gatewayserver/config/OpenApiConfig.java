@@ -52,13 +52,14 @@ public class OpenApiConfig {
                 .route("swtvap-api-inventory", r -> r.path("/api/categories/**").filters(f -> f.filter(filterFactory.apply())).uri("lb://SWTVAP-API-INVENTORY"))
                 .route("swtvap-api-inventory", r -> r.path("/api/category-catalogs/**").filters(f -> f.filter(filterFactory.apply())).uri("lb://SWTVAP-API-INVENTORY"))
                 .route("swtvap-api-inventory", r -> r.path("/api/units/**").filters(f -> f.filter(filterFactory.apply())).uri("lb://SWTVAP-API-INVENTORY"))
-                .route("swtvap-api-cart", r -> r.path("/swtvap-api-cart/v3/api-docs").and().method(HttpMethod.GET).uri("lb://SWTVAP-API-CART"))
-                .route("swtvap-api-cart", r -> r.path("/api/carts/**").filters(f -> f.filter(filterFactory.apply())).uri("lb://SWTVAP-API-CART"))
-                .route("swtvap-api-cart", r -> r.path("/api/cart-details/**").filters(f -> f.filter(filterFactory.apply())).uri("lb://SWTVAP-API-CART"))
                 .route("swtvap-api-campaing", r -> r.path("/swtvap-api-campaing/v3/api-docs").and().method(HttpMethod.GET).uri("lb://SWTVAP-API-CAMPAING"))
                 .route("swtvap-api-campaing", r -> r.path("/api/analytics/**").filters(f -> f.filter(filterFactory.apply())).uri("lb://SWTVAP-API-CAMPAING"))
                 .route("swtvap-api-campaing", r -> r.path("/api/marketing-campaigns/**").filters(f -> f.filter(filterFactory.apply())).uri("lb://SWTVAP-API-CAMPAING"))
                 .route("swtvap-api-campaing", r -> r.path("/api/newsletter-subscriptions/**").filters(f -> f.filter(filterFactory.apply())).uri("lb://SWTVAP-API-CAMPAING"))
+                .route("swtvap-api-cart", r -> r.path("/swtvap-api-cart/v3/api-docs").and().method(HttpMethod.GET).uri("lb://SWTVAP-API-CART"))
+                .route("swtvap-api-cart", r -> r.path("/api/carts/**").filters(f -> f.filter(filterFactory.apply())).uri("lb://SWTVAP-API-CART"))
+                .route("swtvap-api-cart", r -> r.path("/api/cart-details/**").filters(f -> f.filter(filterFactory.apply())).uri("lb://SWTVAP-API-CART"))
+                .route("swtvap-api-web", r -> r.path("/api/cart-details/**").filters(f -> f.filter(filterFactory.apply())).uri("lb://SWTVAP-API-WEB"))
                 .build();
     }
 }
