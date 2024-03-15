@@ -62,6 +62,14 @@ public class OpenApiConfig {
                 .route("swtvap-api-cart", r -> r.path("/api/carts/**").filters(f -> f.filter(filterFactory.apply())).uri("lb://SWTVAP-API-CART"))
                 .route("swtvap-api-cart", r -> r.path("/api/cart-details/**").filters(f -> f.filter(filterFactory.apply())).uri("lb://SWTVAP-API-CART"))
                 .route("swtvap-api-web", r -> r.path("/api/w-parameters/**").filters(f -> f.filter(filterFactory.apply())).uri("lb://SWTVAP-API-WEB"))
+                .route("swtvap-api-web", r -> r.path("/api/w-products/**").filters(f -> f.filter(filterFactory.apply())).uri("lb://SWTVAP-API-WEB"))
+                .route("swtvap-api-web", r -> r.path("/api/w-categories/**").filters(f -> f.filter(filterFactory.apply())).uri("lb://SWTVAP-API-WEB"))
+                .route("swtvap-api-web", r -> r.path("/api/w-catalogs/**").filters(f -> f.filter(filterFactory.apply())).uri("lb://SWTVAP-API-WEB"))
+                .route("swtvap-api-web", r -> r.path("/api/w-comments/**").filters(f -> f.filter(filterFactory.apply())).uri("lb://SWTVAP-API-WEB"))
+                .route("swtvap-api-web", r -> r.path("/api/w-contacts/**").filters(f -> f.filter(filterFactory.apply())).uri("lb://SWTVAP-API-WEB"))
+                .route("swtvap-api-web", r -> r.path("/api/w-reviews/**").filters(f -> f.filter(filterFactory.apply())).uri("lb://SWTVAP-API-WEB"))
+                .route("swtvap-api-web", r -> r.path("/api/w-analytics/**").filters(f -> f.filter(filterFactory.apply())).uri("lb://SWTVAP-API-WEB"))
+                .route("swtvap-api-web", r -> r.path("/api/w-newsletter-subscriptions/**").filters(f -> f.filter(filterFactory.apply())).uri("lb://SWTVAP-API-WEB"))
                 .build();
     }
 }
